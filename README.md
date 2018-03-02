@@ -8,3 +8,4 @@
 	* creates a folder ".git"
 * git clone <repo url>
 	* creates a *copy* or clone of remote repositoriesadding a line
+* This is another line.
