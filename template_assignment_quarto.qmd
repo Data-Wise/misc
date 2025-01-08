@@ -1,0 +1,123 @@
+---
+title: "Assignment Title"
+author: "Your Name"
+date: "`r Sys.Date()`"
+format:
+  typst: 
+    number-sections: false 
+    margin: 
+      top: 1in 
+      right: 1.25in 
+      bottom: 1in 
+      left: 0.5in 
+    fontsize: 11pt 
+    page-breaks-before: 1 
+    page-breaks-after: 1  
+    page-size: letter 
+    page-number: true 
+    fig-width: 7  # Adjust the width as needed
+    fig-height: 5  # Adjust the height as needed
+    tbl-cap-location: top 
+    fig-cap-location: bottom
+---
+
+# Introduction
+
+This assignment covers the key concepts and methods for [insert topic here]. The purpose is to demonstrate the understanding of the techniques discussed in the lectures and their application to real data sets.
+
+::: {.callout-note}
+Replace `[insert topic here]` with a brief description of the assignment's main objective.
+:::
+
+# Problem 1: [Problem Title]
+
+## Question
+
+Clearly state the question or problem that you are solving. Provide any given information, data, or equations.
+
+## Solution
+
+1. **Mathematical Formulas:**
+
+Typeset your mathematical formulas using LaTeX. For example:
+
+$$
+\hat{\beta} = (X'X)^{-1} X'Y
+$$
+
+2. **R Code for Calculation:**
+
+Use R code to perform any necessary calculations or data analysis:
+
+```{r}
+#| label: fig-problem1-plot
+# Example R code to generate a plot for Problem 1
+library(ggplot2)
+data <- data.frame(x = c(1, 2, 3, 4, 5), y = c(2, 4, 3, 5, 7))
+ggplot(data, aes(x = x, y = y)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    labs(
+        title = "Scatter Plot with Regression Line for Problem 1",
+        x = "Independent Variable",
+        y = "Dependent Variable"
+    )
+```
+
+3. **Interpretation:**
+
+Interpret the results of your analysis. For example, explain what the estimated coefficients represent and how they relate to the problem context.
+
+::: {.callout-note}
+Provide a clear explanation of the steps taken and their relevance to the solution.
+:::
+
+# Problem 2: [Problem Title]
+
+## Question
+
+Provide a detailed description of the problem, including any given information.
+
+## Solution
+
+1. **Handwritten Calculations:**
+
+If you need to show any hand calculations, write them clearly and legibly, then scan or take a high-quality picture of your work. Embed the scanned image in your document:
+
+```markdown
+![Handwritten Calculation for Problem 2](path/to/your/image.png){ width=60% }
+```
+
+2. **R Code for Analysis:**
+
+Include R code for any analysis required:
+
+```{r}
+#| label: fig-problem2-plot
+# Example R code for creating a histogram
+hist(data$x, main = "Histogram of X Values", xlab = "X Values", col = "lightblue", border = "black")
+```
+
+# Conclusion
+
+Summarize the findings from each problem. Reflect on the results and any challenges encountered during the assignment.
+
+::: {.callout-note}
+Discuss any additional insights gained from completing the assignment.
+:::
+
+# Additional Instructions
+
+- Ensure all R code chunks are labeled appropriately (`fig-` for figures, `tbl-` for tables).
+- Make sure that all figures, tables, and equations are correctly referenced in the text.
+- Remember to proofread your assignment before submission to check for clarity, accuracy, and formatting consistency.
+
+::: {.callout-note}
+Follow these instructions to complete your assignment in the correct format.
+:::
+
+## Include he following code for diagnostic and reproducibility purposes:
+
+```{r}
+sessionInfo()
+```
